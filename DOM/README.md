@@ -1,22 +1,47 @@
 # DOM
 
+## Sumário
+1. [Definição](#definição)
+2. [Função e Importância](#função-e-importância)
+3. [Funcionamento](#funcionamento)
+4. [Aplicações Práticas](#aplicações-práticas)
+5. [Importância para o Desenvolvimento Web](#importância-para-o-desenvolvimento-web)
+
 ## Definição
 
-O DOM, do inglês Document Object Model, ou seja Modelo de Objeto de Documento é uma API cujo papel é representar e permitir interação com documentos HTML ou XML [(1)](https://developer.mozilla.org/pt-BR/docs/Glossary/DOM.)
+DOM, do inglês Document Object Model, ou seja Modelo de Objeto de Documento é uma API cujo papel é representar e permitir interação com documentos HTML ou XML [(1)](https://developer.mozilla.org/pt-BR/docs/Glossary/DOM)
 
 > [!NOTE]
-> API (Application Programming Interface ou, em português, interface de programação de aplicações) é um conjunto de ferramentas expostas por um software para que seja possível conectar outros programas a ele, sem que seja necessário conhecer os detalhes de sua implementação. [(2)](https://www.redhat.com/pt-br/topics/api/what-are-application-programming-interfaces#como-as-apis-funcionam)
+> API (Application Programming Interface ou, em português, interface de programação de aplicações) é um conjunto de ferramentas expostas por um software para permiter que outros softwares se comuniquem com ele, sem que seja necessário conhecer os detalhes de sua implementação. [(2)](https://www.redhat.com/pt-br/topics/api/what-are-application-programming-interfaces#como-as-apis-funcionam)
 
-O DOM é a camada, composta por um conjunto de de objetos e metódos, que utilizamos para interagir com nosso código JavaScript e o HTML/CSS que compõem o documento exibido no navegador. É essa ferramenta que assegura a interatividade nos documentos, permitindo que seja possível realizar a inclusão ou exclusão de um elemento, mudar a cor, a posição ou o tamanho de um elemento. Ou seja, o DOM nos permite manipular o HTML ou CSS de uma página. [(3)](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/putting-it-all-together/the-dom)
+## Função e Importância
+O DOM atua como uma camada intermediária, composta por um conjunto de objetos e métodos, que facilita a interação entre o código JavaScript e os elementos HTML/CSS que compõem o documento exibido no navegador. Suas principais funções incluem:
 
+1. Assegurar a interatividade nos documentos web
+2. Permitir a manipulação dinâmica de elementos HTML e CSS
+3. Possibilitar a inclusão, exclusão e modificação de elementos na página
 
+## Funcionamento
+Os navegadores utilizam o DOM para representar o documento carregado como uma estrutura de árvore, onde:
 
+- Cada nó representa um ou mais elementos do documento
+- O código em execução no navegador pode acessar e interagir com cada nó
+- É possível criar, remover ou modificar nós
+- Eventos que ocorrem na página podem ser "escutados" e tratados
 
+## Aplicações Práticas
+Com o DOM, desenvolvedores podem:
 
+- Alterar a estrutura do documento HTML
+- Modificar estilos CSS dinamicamente
+- Responder a interações do usuário em tempo real
+- Criar experiências web interativas e dinâmicas
 
-
+## Importância para o Desenvolvimento Web
+O DOM é fundamental para a criação de páginas web modernas e interativas, permitindo que desenvolvedores criem aplicações web robustas e responsivas.
 
 ## Referências
 
-- 1: https://developer.mozilla.org/pt-BR/docs/Glossary/DOM
-- 2: https://www.redhat.com/pt-br/topics/api/what-are-application-programming-interfaces#como-as-apis-funcionam
++ [MDN Web Docs - DOM](https://developer.mozilla.org/pt-BR/docs/Glossary/DOM)
++ [Red Hat - O que é API](https://www.redhat.com/pt-br/topics/api/what-are-application-programming-interfaces#como-as-apis-funcionam)
++ [Complete Intro to Web Development, v3 - The DOM](https://btholt.github.io/complete-intro-to-web-dev-v3/lessons/putting-it-all-together/the-dom)
