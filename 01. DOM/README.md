@@ -7,6 +7,7 @@
 3. [Funcionamento](#funcionamento)
 4. [Aplicações Práticas](#aplicações-práticas)
 5. [Importância para o Desenvolvimento Web](#importância-para-o-desenvolvimento-web)
+6. [Referências](#referências)
 
 ## Definição
 
