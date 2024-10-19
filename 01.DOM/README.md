@@ -34,7 +34,8 @@ Os navegadores utilizam o DOM para representar o documento carregado como uma es
 
 O diagrama abaixo apresenta a estrutura de árvore que representa o documento HTML da imagem abaixo, onde cada nó da árvore representa uma tag HTML ou um conjunto de tags HTML e as folhas representam os conteúdos das tags:
 
-<img src="file:///home/gustavo/snap/marktext/9/.config/marktext/images/2024-10-18-21-20-43-image.png" title="" alt="" data-align="center">
+![alt text](./doc.webp)
+
 
 ```mermaid
 flowchart LR
