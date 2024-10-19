@@ -126,7 +126,7 @@ const artigo = document.getElementsByTagName("article")[0]
 > console.log(n);
 > // 75
 > ```
-> HTMLCollection é ==similar== a um vetor, também chamado de _array_, portanto HTMLCollection[0] retorna o primeiro elemento da coleção.
+> HTMLCollection é __similar__ a um vetor, também chamado de _array_, portanto HTMLCollection[0] retorna o primeiro elemento da coleção.
 
 As duas operações são equivalentes e resultarão no diagrama demonstrado abaixo, note que a raiz da sub-árvore `artigo` passa a ser a tag `article`:
 
