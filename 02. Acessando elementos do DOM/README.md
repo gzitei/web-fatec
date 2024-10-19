@@ -5,7 +5,7 @@
 2. [Acessando elementos](#acessando-elementos)
 3. [Seletores CSS](#seletores-css)
 4. [Subconsultas](#subconsultas)
-5. [Hierarquia entre nós](hierarquia-entre-nós)
+5. [Hierarquia entre nós](#hierarquia-entre-nós)
 6. [Percorrendo elementos do DOM](#percorrendo-elementos-do-dom)
 7. [Referências](#referências)
 ## Acessando o DOM
