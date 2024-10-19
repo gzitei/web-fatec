@@ -49,7 +49,7 @@ flowchart LR
     J --> L[li] --> Carne
     J --> M[li] --> Carvão
     J --> N[li] --> Gelo
-    G --> O[h2] --> P[Local: Rua dos bobos, 0]
+    G --> O[h2] --> P[Local: Rua dos bobos]
     G --> Q[h2] --> S[Data: 30/02/2025]
 ```
 
