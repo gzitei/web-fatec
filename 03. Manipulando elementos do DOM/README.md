@@ -161,26 +161,38 @@ Os exemplos acima, bem como o resultado final obtido, podem ser observados em no
 > 
 >  + [__Declaração de função__](https://www.w3schools.com/js/js_functions.asp)
 > 	 + `function` em JavaScript o modo mais explícito de se declarar uma função é usando a palavra chave `function`.
+> 		
+> 		```javascript
+> 		function createCarRow(obj) {
+> 			const tr = document.createElement("tr");
+> 			for ([key, value] of Object.entries(obj)) {
+> 				let td = document.createElement("td");
+> 				td.textContent = value;
+> 				tr.appendChild(td);
+> 			}
+> 			return tr;
+> 		}
+> 		```
 > 	
 > 	 + `arrow function`, uma função pode ser declarada de modo anônimo utilizando a notação chamada `arrow function`, que consiste da seguinte estrutura:
 > 		 ```javascript
-> 		 (a, b) => { a + b }
+> 		 (a, b) => { return a + b }
 >		  ```
 >		  No exemplo acima, a função recebe os argumentos `a` e `b` e retorna o resultado de `a + b`.
 >		
 >		  As `arrow functions` podem aparecer ainda com outras configurações, por exemplo:
 >		
 > 		  ```javascript
-> 		  a => { a + 4 } // quando a arrow function recebe apenas um argumento, pode-se dispensar os parênteses
+> 		  a => { return a + 4 } // quando a arrow function recebe apenas um argumento, pode-se dispensar os parênteses
 > 		
-> 		  _ => { a + b } // quando a arrow function não recebe argumentos, pode-se utilizar o underline
+> 		  _ => { return true } // quando a arrow function não recebe argumentos, pode-se utilizar o underline
 > 		
-> 		  () => { a + b } // equivale ao uso do underline
+> 		  () => { return 5 } // equivale ao uso do underline
 >		  ```
 >		  As `arrow functions` podem ser atribuídas a variáveis, bastando executar a variável para obter o resultado da função.
 >		
 >		  ```javascript
->		  const soma = (a, b) => { a + b };
+>		  const soma = (a, b) => { return a + b };
 >		  soma(3, 2) // retorna 5
 >		  ```
 >		
@@ -194,13 +206,12 @@ Os exemplos acima, bem como o resultado final obtido, podem ser observados em no
 > 	+ `map`: similar ao `forEach`, percorre todos os elementos do array aplicando uma função a cada elemento e armazenando o seu resultado na posição do elemento. Por exemplo:
 > 	
 > 		```javascript
-> 		const squared = x => { x * x }
+> 		const squared = x => { return x * x }
 > 		const arr = [1, 2, 3];
 > 		const arrSq = arr.map(squared);
 > 		console.log(arrSq) // [1, 4, 9]
 > 		```
 >
-
 
 ## Referências
 + [WebAssembly | MDN](https://developer.mozilla.org/pt-BR/docs/WebAssembly)
