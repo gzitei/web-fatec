@@ -211,12 +211,10 @@ Com relação ao elemento `article`, pode-se dizer que:
 + `article` não possui `sibling` porque não existem outros elementos contidos dentro de `body` no mesmo nível da árvore que o elemento `article`. No entanto, é possível afirmar que os elementos `h1`, `p`, `img` e `table`apresentam relação de `sibling` entre si, porque estão contidos em `article` e ocupam o mesmo nível dentro da árvore, ou seja, compartilham o mesmo nó `parent`.
 ## Percorrendo elementos do DOM
 Utilizando-se da relação hierárquica entre nós, é possível navegar entre eles utilizando as propriedades dos nós. Para exemplificar, vamos utilizar o nó artigo:
-
 ```javascript
 const artigo = document.querySelector("article");
 ```
-
-+ `parentElement`: retorna o elemento `parent` do elemento indicado, neste caso, retornaria o `body`
++ `parentElement`: retorna o elemento `parent` do elemento indicado, neste caso, retornaria o `body`:
 ```javascript
 const body = artigo.parentElement;
 ```
@@ -224,11 +222,11 @@ const body = artigo.parentElement;
 ```javascript
 const content = artigo.children;
 ```
-+ `firstElementChild`: retorna o elemento do primeiro filho. No nosso exemplo, retornaria o nó do elemento `h1`;
++ `firstElementChild`: retorna o elemento do primeiro filho. No nosso exemplo, retornaria o nó do elemento `h1`:
 ```javascript
 const h1 = artigo.firstElementChild;
 ```
-+ `lastElementChild`:  retorna o elemento referente ao último filho. Neste caso, representado pelo último parágrafo do texto.
++ `lastElementChild`:  retorna o elemento referente ao último filho. Neste caso, representado pelo último parágrafo do texto:
 ```javascript
 const lastParagraph = artigo.lastElementChild;
 ```
