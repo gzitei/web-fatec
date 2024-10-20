@@ -31,7 +31,12 @@ Dessa forma, o documento passará a conter o seguinte elemento:
 <h1 id="greeting">Olá mundo!</h1>
 ```
 
-O [exemplo 1](./Exemplos/exemplo-1.html) demonstra o comportamento citado acima.
+O [exemplo 1](https://htmlpreview.github.io/?https://raw.githubusercontent.com/gzitei/web-fatec/refs/heads/main/03.%20Manipulando%20elementos%20do%20DOM/Exemplos/exemplo-1.html) demonstra o comportamento citado acima.
+
+>[!NOTE]
+>Nos nossos exemplos à direita do leitor sempre será exibido o código fonte que foi utilizado para gerar o resultado, que pode ser visualizado à esquerda.
+
+### Modificando estilo
 
 ## Referências
 +[WebAssembly | MDN](https://developer.mozilla.org/pt-BR/docs/WebAssembly)

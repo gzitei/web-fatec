@@ -30,9 +30,9 @@
       h1.textContent = "Hello World!";
       code.innerText = h1.outerHTML + "\n";
       script = document.createElement("script");
-      script.textContent = `
-const greeting = document.querySelector("#greeting");\ngreeting.textContent = "Olá mundo!";
-`;
+      script.textContent =
+        `\nconst greeting = document.querySelector("#greeting");` +
+        `\ngreeting.textContent = "Olá mundo!";\n`;
       page.appendChild(h1);
       page.appendChild(script);
       code.innerText += script.outerHTML;
