@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: system-ui;
+      }
+
+      body {
+        display: flex;
+        height: 100dvh;
+        width: 100dvw;
+        align-items: center;
+      }
+
+      #calculadora {
+        display: flexbox;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 300px;
+        height: 500px;
+        background-color: black;
+        padding: 5px;
+        border-radius: 20px;
+      }
+
+      .display {
+        height: 20%;
+        margin: 10px;
+        align-self: flex-start;
+        background-color: #525252;
+        color: white;
+        font-size: 38px;
+        border-radius: 10px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: flex;
+        justify-content: right;
+        align-items: flex-end;
+        padding: 10px;
+      }
+
+      .buttons {
+        display: grid;
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+        gap: 5px;
+        align-self: flex-end;
+        padding: 10px;
+        height: calc(80% - 20px);
+        overflow: hidden;
+      }
+
+      .item {
+        border-radius: 100%;
+        background-color: lightgrey;
+        height: 100%;
+        width: 100%;
+        font-size: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .op {
+        background-color: orange;
+        color: white;
+        font-weight: bold;
+      }
+
+      #C {
+        background-color: crimson;
+        color: white;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <script>
+      const body = document.querySelector("body");
+
+      const calculadora = document.createElement("section");
+      calculadora.setAttribute("id", "calculadora");
+
+      const display = document.createElement("section");
+      display.className = "display";
+      calculadora.appendChild(display);
+
+      const buttons = document.createElement("section");
+      buttons.className = "buttons";
+
+      const layout = [
+        ["C", "(", ")", "+"],
+        ["7", "8", "9", "-"],
+        ["4", "5", "6", "/"],
+        ["1", "2", "3", "*"],
+        ["0", ".", "del", "="],
+      ];
+
+      layout.flat().forEach((content, idx) => {
+        const button = document.createElement("div");
+        button.className = (idx + 1) % 4 === 0 ? "item op" : "item";
+        button.id = content;
+        button.textContent = content;
+        button.style.filter = "brightness(80%)";
+        buttons.appendChild(button);
+      });
+
+      calculadora.appendChild(buttons);
+
+      body.appendChild(calculadora);
+
+      const clear = document.querySelector("#C");
+      clear.addEventListener("click", () => {
+        display.textContent = "";
+      });
+
+      const evalExpression = document.querySelector("[id='=']");
+      evalExpression.addEventListener("click", () => {
+        try {
+          const final = eval(display.textContent);
+          display.textContent = final;
+        } catch (error) {
+          console.log(error);
+          display.textContent = "ERROR!";
+        }
+      });
+
+      const del = document.querySelector("#del");
+      del.addEventListener("click", () => {
+        const txt = display.textContent;
+        if (txt == "ERROR!") {
+          display.textContent = "";
+        } else {
+          display.textContent = txt.substring(0, txt.length - 1);
+        }
+      });
+
+      calculadora.addEventListener("click", (event) => {
+        const target = event.target;
+        if (!target.className.includes("item")) {
+          return;
+        }
+        const ignoreList = [clear, evalExpression, del].map((element) =>
+          element.id
+        );
+        if (ignoreList.includes(target.id)) {
+          return;
+        }
+        display.textContent += target.textContent;
+      });
+
+      const items = document.querySelectorAll(".item");
+
+      items.forEach((button) => {
+        button.addEventListener("mouseover", (event) => {
+          const target = event.target;
+          target.style.filter = "brightness(100%)";
+        });
+
+        button.addEventListener("mouseout", (event) => {
+          const target = event.target;
+          target.style.filter = "brightness(80%)";
+        });
+      });
+    </script>
+  </body>
+</html>
