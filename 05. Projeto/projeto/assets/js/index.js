@@ -62,6 +62,11 @@ calculadora.addEventListener("click", (event) => {
   if (!target.className.includes("item")) {
     return;
   }
+  if (target.id === evalExpression.id) {
+    display.style.justifyContent = "left";
+  } else {
+    display.style.justifyContent = "right";
+  }
   const ignoreList = [clear, evalExpression, del].map((element) => element.id);
   if (ignoreList.includes(target.id)) {
     return;
