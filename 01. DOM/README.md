@@ -25,7 +25,7 @@ Os navegadores utilizam o DOM para representar o documento carregado como uma es
 - É possível criar, remover ou modificar nós
 - Eventos que ocorrem na página podem ser "escutados" e tratados
 O diagrama abaixo apresenta a estrutura de árvore que representa o documento HTML da imagem abaixo, onde cada nó da árvore representa uma tag HTML ou um conjunto de tags HTML e as folhas representam os conteúdos das tags:
-![alt text](doc.webp)
+![Visão da página web](./img/doc.webp)
 
 ```mermaid
 flowchart LR

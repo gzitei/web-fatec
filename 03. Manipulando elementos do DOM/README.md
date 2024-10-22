@@ -9,7 +9,7 @@ Este processo é fundamental para a criação de páginas interativas, que sejam
 
 > [!TIP]
 > Nos nossos exemplos utilizaremos o [Codepen](https://codepen.io/). Lá, será possível observar 4 janelas, conforme a imagem abaixo:
-> ![](./img/codepen.webp)
+> ![Codepen](./img/codepen.webp)
 > Na janela 1, é exibido o código HTML do `body` da página, na janela 2 o CSS responsável pela estilização da página e na janela 3 o código JavaScript que é executado na página. A janela 4 exibe o resultado final da página combinando o conteúdo das demais janelas.
 > 
 > __Recomendação:__ Para explorar o comportamento da página, você pode apagar o código JavaScript, para ver o ponto de partida a página e depois voltar o código linha a linha para entender como ele interage com o conteúdo.
