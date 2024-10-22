@@ -5,7 +5,9 @@
 3. [Referências](#referências)
 ## Manipulando elementos do DOM
 Pode-se definir manipulação do DOM como o processo de interagir e modificar a estrutura de um documento em tempo real, utilizando linguagens de programação. A linguagem mais comum para este propósito é o JavaScript, porém é possível realizar as mesmas ações utilizando outras linguagens utilizando [WebAssembly](https://developer.mozilla.org/pt-BR/docs/WebAssembly).
+
 Este processo é fundamental para a criação de páginas interativas, que sejam capazes de responder a ações do usuário de forma dinâmica, sem que seja necessário carregar uma página completamente nova a cada interação.
+
 A exemplo das definições de estilização da página, que podem ser incluídas no arquivo HTML dentro da tag `style` ou importadas de outro arquivo utilizando uma tag `link`, o código JavaScript pode ser implementado diretamente no HTML, dentro da tag `script` ou importado de outro arquivo utilizando a propriedade `src` da tag script.
 
 > [!TIP]
