@@ -101,13 +101,17 @@ end
 É possível destacar a sub-árvore que representa o artigo (`<article>`) utilizando:
 
 ```javascript
-const artigo = document.querySelector("article")
+const artigo = document.querySelector("article");
+console.log(artigo);
+// <article></article>
 ```
 
 ou
 
 ```javascript
-const artigo = document.getElementsByTagName("article")[0]
+const artigo = document.getElementsByTagName("article")[0];
+console.log(artigo);
+// <article></article>
 ```
 > [!NOTE]
 > A sintaxe do JavaScript é baseada nas sintaxes de C e Java.
@@ -153,7 +157,9 @@ end
 Da mesma forma, partindo da sub-árvore `artigo` é possível extrair uma sub-árvore `tabela` a partir de `artigo` utilizando:
 
 ```javascript
-const tabela = artigo.querySelector("table")
+const tabela = artigo.querySelector("table");
+console.log(table);
+// <table></table>
 ```
 
 A operação acima resultaria na seguinte sub-árvore:
@@ -213,30 +219,44 @@ Com relação ao elemento `article`, pode-se dizer que:
 Utilizando-se da relação hierárquica entre nós, é possível navegar entre eles utilizando as propriedades dos nós. Para exemplificar, vamos utilizar o nó artigo:
 ```javascript
 const artigo = document.querySelector("article");
+console.log(artigo);
+// <article></article>
 ```
 + `parentElement`: retorna o elemento `parent` do elemento indicado, neste caso, retornaria o `body`:
 ```javascript
 const body = artigo.parentElement;
+console.log(body);
+// <body></body>
 ```
 + `children`: retorna uma coleção _viva_ de elementos `child` do elemento especificado. No exemplo em tela, retornaria os nós `h1`, `p`, `img` e `table` contidos em `article`:
 ```javascript
 const content = artigo.children;
+console.log(content);
+// [<h1></h1>, <p></p>, <p></p>, <img></img>, <p></p>, <table></table>, <p></p>]
 ```
 + `firstElementChild`: retorna o elemento do primeiro filho. No nosso exemplo, retornaria o nó do elemento `h1`:
 ```javascript
 const h1 = artigo.firstElementChild;
+console.log(h1);
+// <h1></h1>
 ```
 + `lastElementChild`:  retorna o elemento referente ao último filho. Neste caso, representado pelo último parágrafo do texto:
 ```javascript
 const lastParagraph = artigo.lastElementChild;
+console.log(lastParagraph);
+// <p></p>
 ```
 + `nextElementSibling`: retorna o próximo elemento irmão do elemento especificado ou `null`, caso o elemento em questão seja o último. A propriedade `nextElementSibling` aplicada ao elemento `lastParagraph` retornaria `null`.
 ```javascript
 const firstParagraph = h1.nextElementSibling;
+console.log(firstParagraph);
+// <p></p>
 ```
 + `previousElementSibling`: retorna o elemento anterior ao elemento especificado ou `null` caso o elemento indicado seja o primeiro. Portanto, caso aplicada ao elemento `h1`, retornaria `null`, já quando aplicada ao elemento `lastParagraph`, retornaria o elemento `table`.
 ```javascript
 const table = lastParagraph.previousElementSibling;
+console.log(table);
+// <table></table>
 ```
 ## Referências
 + [CSS Selectors](https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_selectors)
