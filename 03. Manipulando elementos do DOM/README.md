@@ -12,7 +12,8 @@ A exemplo das definições de estilização da página, que podem ser incluídas
 > Nos nossos exemplos utilizaremos o [Codepen](https://codepen.io/). Lá, será possível observar 4 janelas, conforme a imagem abaixo:
 > ![Codepen](./img/codepen.webp)
 > Na janela 1, é exibido o código HTML do `body` da página, na janela 2 o CSS responsável pela estilização da página (`style.css`) e na janela 3 o código JavaScript que é executado na página (`index.js`). A janela 4 exibe o resultado final da página combinando o conteúdo das demais janelas.
-> É como se o conteúdo da página fosse gerado pelo seguinte código:
+> 
+> É como se o resultado final da página fosse gerado pelo seguinte código:
 >
 > ```html
 > <!DOCTYPE html>
