@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("./fonts/Bricolage_Grotesque/BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf");
+}
+
+@font-face {
+  font-family: "Mogra";
+  src: url("./fonts/Mogra/Mogra-Regular.ttf");
+}
+
+body {
+  color: whitesmoke;
+  font-size: 16pt;
+  font-family: "Bricolage Grotesque";
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background:
+    linear-gradient(90deg, #181818 1em, transparent 1%) 50% 50%,
+    linear-gradient(#181818 1em, transparent 1%) 50% 50%,
+    whitesmoke;
+  background-size: .8em .8em;
+}
+
+header {
+  width: 100dvw;
+  height: 3.2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2em;
+  position: fixed;
+  padding-top: 0;
+  background-color: rgba(0, 82, 91, 40%);
+  backdrop-filter: blur(.3em);
+  color: whitesmoke;
+  z-index: 1;
+}
+
+.title {
+  padding: .8em 5em .8em 2.5em;
+  font-size: 1.6em;
+  font-weight: bolder;
+}
+
+nav {
+  flex-grow: 1;
+  display: flex;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.menu {
+  display: flex;
+  list-style-type: none;
+}
+
+.menu li {
+  padding: 1em 1.2em;
+}
+
+.menu li:hover {
+  text-decoration: underline;
+  text-underline-offset: .2em;
+  text-decoration-style: .175em;
+}
+
+.menu li:last-child {
+  background-color: #181818;
+  color: #F5F5F5;
+  margin-left: auto;
+  position: absolute;
+  right: 0;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #181818;
+  color: white;
+  height: 10em;
+  padding: 1.2em 2em;
+  border-top: .125em solid #585858;
+}
+
+footer div {
+  width: 120ch;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-grow: 1;
+  margin: 0 auto;
+}
+
+footer p {
+  font-size: 0.8em;
+  margin-top: auto;
+  text-align: center;
+}
+
+footer li {
+  font-size: 0.8em;
+  list-style: none;
+}
+
+footer li:hover {
+  text-decoration: underline;
+}
+
+main {
+  height: 100%;
+  width: 80ch;
+  flex-grow: 1;
+  padding: 3.8em 1em;
+  background-color: #181818;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto 1fr;
+  gap: 1em;
+}
+
+.card {
+  height: 10em;
+  border-radius: .5em;
+  border: .125em solid #585858;
+  display: inline-block;
+  display: flex;
+  padding: 2em;
+  color: whitesmoke;
+  flex-direction: column;
+}
+
+.card:hover {
+  text-decoration: underline;
+  text-underline-offset: .3em;
+  text-decoration-style: .15em;
+}
+
+.container h1 {
+  grid-column: 1 / -1;
+}
+
+.card:nth-child(6n+1) .icon {
+  background-color: #001F4D;
+  border-color: #00FFFF;
+}
+
+.card:nth-child(6n+2) .icon {
+  background-color: #800000;
+  border-color: #FF3366;
+}
+
+.card:nth-child(6n+3) .icon {
+  background-color: #803300;
+  border-color: #FF9933;
+}
+
+.card:nth-child(6n+4) .icon {
+  background-color: #806600;
+  border-color: #FFFF00;
+}
+
+.card:nth-child(6n+5) .icon {
+  background-color: #1A661A;
+  border-color: #39FF14;
+}
+
+.card:nth-child(6n+6) .icon {
+  background-color: #4D1A66;
+  border-color: #CC33FF;
+}
+
+.icon {
+  position: relative;
+  border-width: .15em;
+  border-style: solid;
+  align-self: flex-start;
+  padding: .1em;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: .3em;
+  color: whitesmoke;
+}
+
+.icon::before {
+  content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="whitesmoke" stroke-width="10" class="bi bi-code-slash" viewBox="0 0 16 16"> <path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0m6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0" /></svg>');
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+}
+
+.card h2 {
+  text-align: right;
+  max-width: 50ch;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+
+.text h1 {
+  order: 1;
+  font-size: 2rem;
+}
+
+.badge {
+  order: 2;
+  margin-bottom: 1rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
