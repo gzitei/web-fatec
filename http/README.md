@@ -47,7 +47,7 @@ No corpo se encontra o conteúdo do que foi requisitado pelo cliente (a grosso m
 
 ![Resposta](./img/response_get_body.png)
 
-Na imagem há uma resposta da requisição GET acima, nela podemos verificar que a requisição foi bem sucedida e que se utiliza a versão 2 do protocolo. Também, no cabeçalho (*header*) verificamos que o conteúdo da resposta é do tipo text/html o qual está presente no corpo (ou *body* ou *payload*) da resposta.
+Na imagem há uma resposta da requisição GET acima, nela podemos verificar que a requisição foi bem sucedida e que se utiliza a versão 2 do protocolo. Também, no cabeçalho (*header*) verificamos que o conteúdo da resposta é do tipo text/html o qual está presente no corpo (ou *body* ou *payload*) da resposta, assim, a resposta é uma página de um site.
 
 ## 3. Funcionamento
 
