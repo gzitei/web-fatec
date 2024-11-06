@@ -37,15 +37,13 @@ Quando o cliente requisita o envio de alguma coisa para o servidor, o conteúdo 
 
 ### 2.2. Resposta:
 
-![Cabeçalho da resposta](./img/response_get.png)
-
 Na identificação há a indicação da versão do protocolo utilizado, o código da resposta e a mensagem de resposta
 
 O cabeçalho possui a mesma lógica da requisição
 
 No corpo se encontra o conteúdo do que foi requisitado pelo cliente (a grosso modo)
 
-![Corpo da resposta](./img/response_get_body.png)
+![Resposta](./img/response_get_body.png)
 
 ## 3. Funcionamento
 
