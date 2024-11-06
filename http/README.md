@@ -22,14 +22,16 @@ Há dois tipos de mensagens neste tipo de protocolo: REQUISIÇÕES e RESPOSTAS, 
 
 ### 2.1. Requisição:
 
-![Cabeçalho da requisição](./img/request_get.png)
-
 Na identificação é indicado o **MÉTODO** ou **VERBO** requisitado ao servidor, o caminho de onde se encontra o recurso e a versão do protocolo utilizado.
 - verbo: GET
 - caminho: /
 - versão: HTTP 2
 
 O cabeçalho é composto por informações referentes ao conteúdo do recurso: tamanho, tipo de codificação utilizada, etc.
+
+![Cabeçalho da requisição](./img/request_get.png)
+
+Na imagem vemos que foi realizado uma requisição ao domínio htmx.org, o verbo requerido é o GET para o caminho / utilizando a versão 2 do protocolo, isso denota que é realizado uma requisição para "pegar" um recurso que se encontra em /. Em amarelo temos o cabeçalho (*header*).
 
 Quando o cliente requisita o envio de alguma coisa para o servidor, o conteúdo do que é requisitado se encontra no corpo da requisição. Como no exemplo abaixo, o corpo da requisição ou *payload* é "alguma coisa"
 
@@ -44,6 +46,8 @@ O cabeçalho possui a mesma lógica da requisição
 No corpo se encontra o conteúdo do que foi requisitado pelo cliente (a grosso modo)
 
 ![Resposta](./img/response_get_body.png)
+
+Na imagem há uma resposta da requisição GET acima, nela podemos verificar que a requisição foi bem sucedida e que se utiliza a versão 2 do protocolo. Também, no cabeçalho (*header*) verificamos que o conteúdo da resposta é do tipo text/html o qual está presente no corpo (ou *body* ou *payload*) da resposta.
 
 ## 3. Funcionamento
 
@@ -89,3 +93,6 @@ Há diversas implementações e exemplos na internet a fora, não vejo necessida
 
 Se tiver muito no pique implemente um servidor de páginas para servir um formulário.
 Caso esteja extremamente no pique implemente o seu próprio servidor HTTP do zero
+
+# 5. Referências
+[Mozilla Org](https://developer.mozilla.org/en-US/docs/Web/HTTP)
