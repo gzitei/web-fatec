@@ -22,7 +22,7 @@ Há dois tipos de mensagens neste tipo de protocolo: REQUISIÇÕES e RESPOSTAS, 
 
 ### 2.1. Requisição:
 
-[Cabeçalho da requisição](./img/request_get.png)
+![Cabeçalho da requisição](./img/request_get.png)
 
 Na identificação é indicado o **MÉTODO** ou **VERBO** requisitado ao servidor, o caminho de onde se encontra o recurso e a versão do protocolo utilizado.
 - verbo: GET
@@ -33,11 +33,11 @@ O cabeçalho é composto por informações referentes ao conteúdo do recurso: t
 
 Quando o cliente requisita o envio de alguma coisa para o servidor, o conteúdo do que é requisitado se encontra no corpo da requisição. Como no exemplo abaixo, o corpo da requisição ou *payload* é "alguma coisa"
 
-[Corpo da requisição](./img/request_post.png)
+![Corpo da requisição](./img/request_post.png)
 
 ### 2.2. Resposta:
 
-[Cabeçalho da resposta](./img/response_get.png)
+![Cabeçalho da resposta](./img/response_get.png)
 
 Na identificação há a indicação da versão do protocolo utilizado, o código da resposta e a mensagem de resposta
 
@@ -45,13 +45,13 @@ O cabeçalho possui a mesma lógica da requisição
 
 No corpo se encontra o conteúdo do que foi requisitado pelo cliente (a grosso modo)
 
-[Corpo da resposta](./img/response_get_body.png)
+![Corpo da resposta](./img/response_get_body.png)
 
 ## 3. Funcionamento
 
 O protocolo é construído sobre uma arquitetura Cliente-Servidor. Assim, o funcionmento pode ser entendido através de uma visão de mais alto nível conforme o seguinte:
 
-[Cliente-Servidor](./img/cliente_servidor.png)
+![Cliente-Servidor](./img/cliente_servidor.png)
 
 1. O cliente realiza uma **REQUISIÇÃO (REQUEST)** de algum recurso ao servidor
 2. O servidor avalia a requisição enviando ao cliente uma **RESPOSTA (RESPONSE)** a sua
