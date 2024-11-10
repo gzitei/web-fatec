@@ -4,7 +4,7 @@ import fs from "node:fs";
 
 const url = "localhost";
 const port = 3000;
-const salt = crypto.randomBytes(16).toString("hex");
+const salt = "xolofompila"; //https://www.youtube.com/watch?v=OxZbSMM2yW0
 
 const router = {
   GET: {},
@@ -27,22 +27,19 @@ const updateUsers = (users) => {
   fs.writeFileSync(db, JSON.stringify(users, null, 2), { encoding: "utf-8" });
 };
 
-const verifyPassword = (password, storedHash) => {
-  const hash = hashPassword(password);
-  return hash === storedHash;
-};
-
 const authenticateUser = (username, password) => {
   const registeredUsers = readUsers();
+  const hash = hashPassword(password);
   const json = JSON.parse(registeredUsers);
-  const candidate = json.users.filter((user) => user.username === username);
-  if (candidate.length === 0) throw new Error("Usuário não encontrado!");
-  const validPassword = verifyPassword(password, candidate[0].password);
-  if (!validPassword) throw new Error("Senha inválida");
+  const candidate = json.users.filter(
+    (user) => user.username === username && user.password === hash,
+  );
+  if (candidate.length === 0) throw new Error("Usuário/senha inválido(a)!");
   return `Usuário ${username} logado com sucesso!`;
 };
 
 const registerUser = (username, inputPassword) => {
+  if (!username || !inputPassword) throw new Error("Informações incompletas!");
   const registeredUsers = readUsers();
   const json = JSON.parse(registeredUsers);
   const usernameAllowed = json.users.filter(
@@ -78,7 +75,7 @@ const getBody = async (req) => {
   return JSON.parse(Buffer.concat(buffers).toString());
 };
 
-const defaultHandler = (req, res) => {
+const defaultHandler = (_, res) => {
   res.writeHead("404", { "Content-Type": "text/plain" });
   res.end("Recurso não encontrado!");
 };
@@ -118,7 +115,7 @@ const login = async (req, res) => {
 
 router["POST"]["/register"] = newUser;
 router["POST"]["/login"] = login;
-router["GET"]["/"] = (req, res) => {
+router["GET"]["/"] = (_, res) => {
   res.writeHead(200, { "Content-Type": "text/plain" });
   res.end("Hello World!\n");
 };
