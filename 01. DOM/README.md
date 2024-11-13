@@ -32,18 +32,28 @@ O diagrama abaixo apresenta a estrutura de árvore que representa o documento HT
 ```mermaid
 flowchart LR
     A[html] --> B[head]
-    B --> C[title] --> D[Churrasco da sala]
-    B --> E[link] --> F[style.css]
+    B --> C[title]
+    C --> D["Churrasco da sala"]
+    B --> E[link]
+    E --> F["style.css"]
     A --> G[body]
-    G --> H[h1] --> I[Lista de compras]
+    G --> H[h1]
+    H --> I["Lista de compras"]
     G --> J[ul]
-    J --> K[li] --> Cerveja
-    J --> L[li] --> Carne
-    J --> M[li] --> Carvão
-    J --> N[li] --> Gelo
-    G --> O[h2] --> P[Local: Rua dos bobos]
-    G --> Q[h2] --> S[Data: 30/02/2025]
+    J --> K[li]
+    K --> L["Cerveja"]
+    J --> M[li]
+    M --> N["Carne"]
+    J --> O[li]
+    O --> P["Carvão"]
+    J --> Q[li]
+    Q --> R["Gelo"]
+    G --> S[h2]
+    S --> T["Local: Rua dos bobos"]
+    G --> U[h2]
+    U --> V["Data: 30/02/2025"]
 ```
+
 ## Aplicações Práticas
 Com o DOM, desenvolvedores podem:
 - Alterar a estrutura do documento HTML
